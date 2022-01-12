@@ -163,7 +163,7 @@ end
  
 local akey = Enum.KeyCode.Q
 local keyss = false
-local silentaim = false
+local silentaim = true
 local camlock = true
 local prediction = 5
 local shiftdown = false
@@ -225,7 +225,7 @@ button.MouseButton1Click:Connect(function()
 end)
  
 mouse.KeyDown:Connect(function(key)
-    if key == "p" then
+    if key == "" then
         if lp.Character then
             lp.Character:Destroy()
         end
@@ -287,7 +287,7 @@ cmdBar.FocusLost:Connect(function()
         notify("SilentAim true")
     end
     if args[1] == Prefix .. "c" or args[1] == Prefix .. "cam" or args[1] == Prefix .. "camlock" then
-        silentaim = false
+        silentaim = true
         camlock = true
         notify("Camlock true")
     end
